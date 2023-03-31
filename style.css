@@ -1,23 +1,21 @@
 body {
-    background-color: #c5b908;
+    background-color: #a1740b;
     margin: 0;
     overflow-y: hidden;
-    animation: sky 6.5s 0s forwards;
+    animation: sky 5.5s forwards;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes sky {
+   
     35% {
-        background-color: #94800d;
-
-    }
-
-    65% {
         background-color: #a1740b;
 
     }
 
     75% {
-        background-color: #81590e;
+        background-color: #352903;
 
     }
 
@@ -40,33 +38,23 @@ img {
     border-radius: 50%;
     position: fixed;
     left: 50%;
-    animation: sunset 15s forwards;
+    animation: sunset 10s forwards;
+    background-color: #b10d0d;
+    box-shadow: 0px 0px 20px 10px #bbb2a9;
+    animation-iteration-count: infinite;
 
 }
 
 @keyframes sunset {
-    0% {
-        background-color: #eb5712;
-        box-shadow: 0px 0px 20px 10px #ece7da;
-    }
-
-    80% {
-        background-color: #640808;
-        box-shadow: 0px 0px 20px 10px #7a3312;
-
-    }
 
     100% {
         /* background-color: #141406; */
         transform: translateY(1000px);
-        background-color: #b1410d;
-        box-shadow: 0px 0px 20px 10px #381e03;
-
+        opacity: 0;
+        background-color: #b10d0d;
+        box-shadow: 0px 0px 20px 10px #b8752d;
 
     }
-
-
-
 
 }
 
@@ -80,13 +68,30 @@ img {
     left: 10%;
     top: 5%;
     opacity: 0;
-    animation: night 5.8s 7s forwards;
+    animation: night 10s forwards infinite;
 
 }
 
+
+
 @keyframes night {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: .2;
+    }
+
+    90% {
+        opacity: .5;
+    }
+
     100% {
         opacity: 1;
     }
-
 }
